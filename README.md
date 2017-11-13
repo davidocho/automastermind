@@ -1,0 +1,2 @@
+# automastermind
+code sample
