@@ -1,18 +1,25 @@
 {
-  "name": "ytplaylist",
+  "name": "async-demo",
   "version": "1.0.0",
-  "description": "fetch request demo",
-  "main": "",
+  "description": "async-demo",
+  "main": "server.js",
+  "engines": {
+    "node": "6.11.4"
+  },
   "scripts": {
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidocho/test-repo.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidocho/test-repo/issues"
+  },
+  "homepage": "https://github.com/davidocho/test-repo#readme",
   "dependencies": {
-    "compass": "^0.1.1",
-    "express": "^4.16.2",
-    "morgan": "^1.9.0",
-    "node-sass": "^4.6.1",
-    "ruby": "^0.6.1"
+    "express": "^4.16.2"
   }
 }
