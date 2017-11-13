@@ -1,12 +1,14 @@
 var express = require("express");
 var http = require("http");
 var logger = require("morgan");
+var cors = require('cors');
 var app = express();
  
  
 // Logging middleware
 app.use(logger("combined"));
 app.use(express.static('public')); 
+app.use(cors());
 // set routes
 app.get('/', function(req, res) {
   res.render('index');
