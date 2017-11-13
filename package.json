@@ -1,0 +1,18 @@
+{
+  "name": "ytplaylist",
+  "version": "1.0.0",
+  "description": "fetch request demo",
+  "main": "",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compass": "^0.1.1",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "node-sass": "^4.6.1",
+    "ruby": "^0.6.1"
+  }
+}
