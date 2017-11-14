@@ -1,5 +1,5 @@
 var express = require("express");
-var http = require("http");
+var https = require("https");
 var logger = require("morgan");
 var cors = require('cors');
 var app = express();
@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
 
 // Set server port
 var port = process.env.PORT || 4000;
-http.createServer(app).listen(port);
+https.createServer(app).listen(port);
 console.log("Server is running at => http://localhost:" + port + "/\nCTRL + C to shutdown");
 
 
