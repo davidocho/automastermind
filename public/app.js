@@ -61,5 +61,4 @@
         console.log(e);
         responseContainer.insertAdjacentHTML('beforeend', `<p class="network-warning">Oh no! There was an error making a request for the ${part}.</p>`);
     }
-
 })();
