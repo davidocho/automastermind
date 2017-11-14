@@ -4,7 +4,7 @@ var app = express();
  
  
 // Logging middleware
-app.use(express.static('public')); 
+app.use(express.static(__dirname + '/public')); 
 app.use(cors());
 // set routes
 app.get('/', function(req, res) {
