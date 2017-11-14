@@ -1,28 +1,26 @@
-//var connect = require('connect');
-//var app = connect();
-//var serveStatic = require('serve-static');
-//var port = process.env.PORT || 3000;
-//app.listen(port);
-//app.use(serveStatic(__dirname)).listen('port', function(){
-//    console.log('Server running on 3000...');
-//});
+var express = require("express");
+var cors = require('cors');
+var app = express();
+ 
+ 
+// Logging middleware
+app.use(function (req, res, next){
+  if (req.headers['x-forwarded-proto'] === 'https') {
+    res.redirect('http://' + req.hostname + req.url);
+  } else {
+    next();
+  }
+});
+app.use(express.static(__dirname + '/public')); 
+app.use(cors());
+// set routes
+app.get('/', function(req, res) {
+  res.render('index');
+});
 
-
-var express = require('express')
-var serveStatic = require('serve-static')
-var port = process.env.PORT || 3000;
-
-var app = express()
-//app.use(serveStatic(path.join(__dirname, 'public'));
-app.use(serveStatic('public', {'index': ['index.html']}))
+// Set server port
+var port = process.env.PORT || 4040;
 app.listen(port);
+console.log("Server is running at => http://localhost:" + port + "/\nCTRL + C to shutdown");
 
-//var express = require('express');
-//var app = express();
-
-////app.set('port', (process.env.PORT || 3000));
-//var port = process.env.PORT || 3000;
-//app.listen(port);
-//
-//app.use(express.static(__dirname + '/public'));
 
