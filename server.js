@@ -19,7 +19,7 @@ app.get('/', function(req, res) {
 });
 
 // Set server port
-var port = process.env.PORT || 4040;
+var port = process.env.PORT || 4321;
 app.listen(port);
 console.log("Server is running at => http://localhost:" + port + "/\nCTRL + C to shutdown");
 
